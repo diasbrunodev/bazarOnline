@@ -11,6 +11,7 @@ export const Header = () => {
           <Link to="/cadastro">
             <img src={logo} alt="Logo Bazar online" />
           </Link>
+
         </DivImage>
 
         <div>Bazar Tropinha</div>

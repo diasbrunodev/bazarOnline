@@ -18,7 +18,7 @@ export const Titulo = styled.div`
   color: ${colors.white};
 `
 
-export const Form = styled.form`
+export const Form = styled.div`
   width: 70%;
   margin: auto;
 

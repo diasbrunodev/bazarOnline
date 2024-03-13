@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 import { FiTrash } from 'react-icons/fi'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { AuthContext } from '../../../contexts/authContext'
 
@@ -38,6 +38,8 @@ export const Dashboard = () => {
   const [items, setItems] = useState<ItemProps[]>([])
 
   const [input, setInput] = useState('')
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     loadItems()
@@ -124,6 +126,7 @@ export const Dashboard = () => {
     console.log('QUERY-SNS', querySnapshot)
     console.log('LIST-ITEMS', listItems)
     setItems(listItems)
+    navigate('/dashboard')
   }
 
   return (
@@ -137,10 +140,10 @@ export const Dashboard = () => {
           onChange={(e) => setInput(e.target.value)}
         />
         <button onClick={handleSearchItem}>Buscar</button>
-        {/* 
+
         <Link to="/">
           <button className="button-home">Home</button>
-        </Link> */}
+        </Link>
 
         <Link to="/cadastro">
           <button className="button-home">Cadastro</button>

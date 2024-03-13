@@ -24,5 +24,7 @@ export const GlobalCss = createGlobalStyle`
 
   body {
     background-color: ${colors.green};
+    max-width: 1024px;
+    margin: auto;
   }
 `
