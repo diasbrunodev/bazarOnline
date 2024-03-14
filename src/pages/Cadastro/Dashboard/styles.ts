@@ -1,8 +1,20 @@
 import styled from 'styled-components'
-import { colors } from '../../../styles'
+import { breakpoints, colors } from '../../../styles'
 
 export const SectionRegister = styled.section`
   padding: 10px;
+
+  /* @media (min-width: ${breakpoints.tablet}) {
+    width: 1%;
+    margin: auto;
+  } */
+
+  .div-cards {
+    @media (min-width: ${breakpoints.tablet}) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
 `
 
 export const Titulo = styled.div`
@@ -31,6 +43,11 @@ export const Form = styled.div`
     border-radius: 5px;
     border: none;
     padding: 10px;
+
+    @media (min-width: ${breakpoints.tablet}) {
+      width: 50%;
+      margin: auto;
+    }
   }
 
   button {
@@ -43,6 +60,11 @@ export const Form = styled.div`
     font-size: 14px;
     font-weight: 700;
     margin: 0 auto;
+
+    @media (min-width: ${breakpoints.tablet}) {
+      width: 20%;
+      margin: auto;
+    }
   }
 
   .button-home {

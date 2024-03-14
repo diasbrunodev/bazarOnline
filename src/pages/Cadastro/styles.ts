@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import { InputField } from '../../components/Input/styles'
 
 export const SectionRegister = styled.section`
@@ -35,6 +35,10 @@ export const SentFile = styled.button`
   height: 80px;
   margin-bottom: 20px;
 
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 10%;
+  }
+
   .upload {
     position: absolute;
   }
@@ -47,6 +51,10 @@ export const SentFile = styled.button`
 export const Form = styled.form`
   width: 70%;
   margin: auto;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 30%;
+  }
 
   ${InputField} {
     margin-bottom: 10px;

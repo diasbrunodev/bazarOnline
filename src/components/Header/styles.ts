@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const HeaderBar = styled.header`
   border-bottom: 1px solid;
@@ -19,6 +19,16 @@ export const HeaderBar = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    align-items: end;
+  }
+
+  .titulo {
+    @media (min-width: ${breakpoints.tablet}) {
+      font-size: 2em;
+    }
+  }
 `
 
 export const DivImage = styled.div`
@@ -26,5 +36,9 @@ export const DivImage = styled.div`
 
   img {
     width: 100%;
+
+    @media (min-width: ${breakpoints.tablet}) {
+      width: 50%;
+    }
   }
 `

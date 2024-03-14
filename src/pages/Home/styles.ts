@@ -1,9 +1,16 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const HomeSection = styled.section`
   background-color: ${colors.green};
   padding-bottom: 20px;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
 `
 
 export const CardSection = styled.section`
@@ -14,6 +21,10 @@ export const CardSection = styled.section`
   margin: 20px auto 0;
 
   background-color: ${colors.white};
+
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 80%;
+  }
 
   img {
     width: 100%;

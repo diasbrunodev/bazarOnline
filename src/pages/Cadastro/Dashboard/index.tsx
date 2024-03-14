@@ -150,20 +150,22 @@ export const Dashboard = () => {
         </Link>
       </Form>
 
-      {items.map((item) => (
-        <CardImage key={item.name}>
-          <ButtonTrash>
-            <button onClick={() => handleDeleteItem(item)}>
-              <FiTrash size={28} />
-            </button>
-          </ButtonTrash>
-          <img src={item.images[0].url} />
-          <p>{item.name}</p>
-          <p>Preço: R$ {item.price}</p>
-          {/* <p>{item.description}</p> */}
-          <p>Cód.: {item.id}</p>
-        </CardImage>
-      ))}
+      <div className="div-cards">
+        {items.map((item) => (
+          <CardImage key={item.name}>
+            <ButtonTrash>
+              <button onClick={() => handleDeleteItem(item)}>
+                <FiTrash size={28} />
+              </button>
+            </ButtonTrash>
+            <img src={item.images[0].url} />
+            <p>{item.name}</p>
+            <p>Preço: R$ {item.price}</p>
+            {/* <p>{item.description}</p> */}
+            <p>Cód.: {item.id}</p>
+          </CardImage>
+        ))}
+      </div>
     </SectionRegister>
   )
 }

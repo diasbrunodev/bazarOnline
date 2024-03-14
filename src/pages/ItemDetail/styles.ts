@@ -1,8 +1,13 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const DetailSection = styled.section`
   padding: 10px;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 50%;
+    margin: auto;
+  }
 `
 
 export const CardDetailSection = styled.section`
