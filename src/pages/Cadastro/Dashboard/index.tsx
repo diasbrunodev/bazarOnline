@@ -99,10 +99,6 @@ export const Dashboard = () => {
     //window.location.reload()
   }
 
-  // useEffect(() => {
-  //   navigate('/dashboard')
-  // }, [navigate])
-
   async function handleSearchItem() {
     if (input === '') {
       loadItems()

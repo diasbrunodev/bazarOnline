@@ -29,6 +29,11 @@ export const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  useEffect(() => {
+    loadItems()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [items])
+
   function loadItems() {
     const itemsRef = collection(db, 'items')
     const queryRef = query(itemsRef, orderBy('created', 'desc'))
