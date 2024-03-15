@@ -21,7 +21,7 @@
 ## Descrição do projeto
 Projeto autoral com a finalidade de atender a uma demanda do Projeto Social [Projeto Tropinha](https://projetotropinha.org/). Instituição da qual eu sou voluntário, e que está sempre fazendo Bazar beneficente, seja presencial ou online, para arrecadar fundos para a manutenção e a ampliação desta organização sem fins lucrativos.
 
-A aplicação conta com página de login, para que somente usuários cadastrados possam inserir e deletar items. A página home pode ser acessada por todos, contando também com a página de detalhes do produto, com link direto para o WhatsApp do administrador do projeto.
+A aplicação conta com página de login, para que somente usuários cadastrados possam inserir e deletar itens. A página home pode ser acessada por todos, contando também com a página de detalhes do produto, com link direto para o WhatsApp do administrador do projeto.
 
 🎈 <i><b>OBS:</b></i> Projeto ainda em desenvolvimento, sendo feito alguns ajustes.
 
