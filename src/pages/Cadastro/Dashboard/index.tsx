@@ -96,12 +96,12 @@ export const Dashboard = () => {
     })
 
     // Após excluir o item e todas as imagens associadas, recarregue a página
-    window.location.reload()
+    //window.location.reload()
   }
 
-  useEffect(() => {
-    navigate('/dashboard')
-  }, [navigate])
+  // useEffect(() => {
+  //   navigate('/dashboard')
+  // }, [navigate])
 
   async function handleSearchItem() {
     if (input === '') {
