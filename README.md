@@ -23,6 +23,8 @@ Projeto autoral com a finalidade de atender a uma demanda do Projeto Social [Pro
 
 A aplicação conta com página de login, para que somente usuários cadastrados possam inserir e deletar items. A página home pode ser acessada por todos, contando também com a página de detalhes do produto, com link direto para o WhatsApp do administrador do projeto.
 
+🎈 <i><b>OBS:</b></i> Projeto ainda em desenvolvimento, sendo feito alguns ajustes.
+
 <p align="justify">
 
   
@@ -97,4 +99,4 @@ npm run dev
 
 ## Desenvolvedor
 
-[<img src="./src/assets/image_official.jpg" width=115><br><sub>Bruno Dias de Freitas</sub>](https://www.linkedin.com/in/brunodias-dev)
+[<img src="./src/images/image_official.jpg" width=115><br><sub>Bruno Dias de Freitas</sub>](https://www.linkedin.com/in/brunodias-dev)
