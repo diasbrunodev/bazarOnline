@@ -62,7 +62,7 @@ export const Cadastro = () => {
   async function handleFile(e: ChangeEvent<HTMLInputElement>) {
     if (e.target.files && e.target.files[0]) {
       const image = e.target.files[0]
-      console.log('IMAGE:', image)
+      // console.log('IMAGE:', image)
 
       if (image.type === 'image/jpeg' || image.type === 'image/png') {
         await handleUpload(image)
@@ -85,7 +85,7 @@ export const Cadastro = () => {
 
     uploadBytes(uploadRef, image).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((downloadUrl) => {
-        console.log(downloadUrl)
+        // console.log(downloadUrl)
         const imageItem = {
           name: uidImage,
           uid: currentUid,
@@ -105,7 +105,7 @@ export const Cadastro = () => {
       await deleteObject(imageRef)
       setImagesItem(imagesItem.filter((img) => img.url !== item.url))
     } catch (error) {
-      console.log('ERRO AO DELETAR')
+      // console.log('ERRO AO DELETAR')
     }
   }
 
@@ -133,17 +133,17 @@ export const Cadastro = () => {
       uid: user?.uid,
     })
       .then(() => {
-        console.log('CADASTRADO COM SUCESSO', db)
+        // console.log('CADASTRADO COM SUCESSO', db)
         setImagesItem([])
         reset()
         navigate('/')
       })
       .catch((error) => {
-        console.log('ERRO:', error)
+        // console.log('ERRO:', error)
         error
       })
 
-    console.log('DATA:', data)
+    // console.log('DATA:', data)
   }
 
   return (

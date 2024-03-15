@@ -72,13 +72,13 @@ export const Dashboard = () => {
         })
       })
       setItems(listItems)
-      console.log('ITEMS:', listItems)
+      // console.log('ITEMS:', listItems)
     })
   }
 
   async function handleDeleteItem(item: ItemProps) {
     const itemDeleted = item
-    console.log(itemDeleted.id)
+    // console.log(itemDeleted.id)
 
     const docRef = doc(db, 'items', itemDeleted.id)
     await deleteDoc(docRef)
@@ -91,7 +91,7 @@ export const Dashboard = () => {
         await deleteObject(imageRef)
         setItems(items.filter((item) => item.id !== itemDeleted.id))
       } catch (error) {
-        console.log('ERRO AO EXCLUIR IMAGEM')
+        // console.log('ERRO AO EXCLUIR IMAGEM')
       }
     })
 
@@ -123,8 +123,8 @@ export const Dashboard = () => {
         id: doc.id,
       })
     })
-    console.log('QUERY-SNS', querySnapshot)
-    console.log('LIST-ITEMS', listItems)
+    // console.log('QUERY-SNS', querySnapshot)
+    // console.log('LIST-ITEMS', listItems)
     setItems(listItems)
     navigate('/dashboard')
   }

@@ -36,13 +36,15 @@ export const Login = () => {
     // console.log('DATA:', data)
     signInWithEmailAndPassword(auth, data.email, data.password)
       .then((user) => {
-        console.log('LOGADO COM SUCESSO!')
-        console.log('USER', user)
+        // console.log('LOGADO COM SUCESSO!')
+        // console.log('USER', user)
+        user
         navigate('/cadastro', { replace: true })
       })
       .catch((error) => {
-        console.log('ERRO AO LOGAR')
-        console.log(error)
+        // console.log('ERRO AO LOGAR')
+        // console.log(error)
+        error
       })
   }
 

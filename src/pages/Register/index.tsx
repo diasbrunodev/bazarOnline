@@ -45,7 +45,7 @@ export const Register = () => {
   })
 
   async function onSubmit(data: FormData) {
-    console.log('DATA:', data)
+    // console.log('DATA:', data)
     createUserWithEmailAndPassword(auth, data.email, data.password)
       .then(async (user) => {
         await updateProfile(user.user, {
@@ -58,12 +58,13 @@ export const Register = () => {
           uid: user.user.uid,
         })
 
-        console.log('CADASTRADO COM SUCESSO!')
+        // console.log('CADASTRADO COM SUCESSO!')
         navigate('/cadastro', { replace: true })
       })
       .catch((error) => {
-        console.log('ERRO AO CADASTRAR ESTE USUÁRIO')
-        console.log(error)
+        // console.log('ERRO AO CADASTRAR ESTE USUÁRIO')
+        // console.log(error)
+        alert(error)
       })
   }
 

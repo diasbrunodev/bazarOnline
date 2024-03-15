@@ -27,11 +27,6 @@ export const Home = () => {
   useEffect(() => {
     loadItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  useEffect(() => {
-    loadItems()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items])
 
   function loadItems() {
@@ -52,15 +47,15 @@ export const Home = () => {
           description: item.data().description,
         })
       })
-      console.log('LISTITEMS:', listItems)
+      // console.log('LISTITEMS:', listItems)
       setItems(listItems)
-      console.log('ITEMS:', items)
+      // console.log('ITEMS:', items)
     })
   }
 
   function handleImageLoad(id: string) {
-    console.log('IMAGEM CARREGADA')
-    console.log('ID DA IMAGE:', id)
+    // console.log('IMAGEM CARREGADA')
+    // console.log('ID DA IMAGE:', id)
     setLoadImages((prevImageLoaded) => [...prevImageLoaded, id])
   }
 
