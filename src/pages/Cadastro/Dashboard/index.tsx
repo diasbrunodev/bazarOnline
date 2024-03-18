@@ -44,6 +44,7 @@ export const Dashboard = () => {
 
   useEffect(() => {
     const unsubscribe = loadItems()
+    navigate('/dashboard')
 
     return () => {
       unsubscribe
