@@ -51,7 +51,7 @@ A aplicação conta com página de login, para que somente usuários cadastrados
 
 ### Layout Responsivo
 
-<img style='width:200px;  margin-right: 20px' src='./src/images/responsive1.png' alt='layout responsivo para celular'> <img style='width:200px;  margin-right: 20px' src='./src/images/responsive2.png' alt='layout responsivo para celular'> <img style='width:200px' src='./src/images/responsive3.png' alt='layout responsivo para celular'> <img style='width:200px' src='./src/images/responsive4.png' alt='layout responsivo para celular'>
+<img style='width:200px;  margin-right: 20px' src='./src/images/responsive5.png' alt='layout responsivo para celular'> <img style='width:200px;  margin-right: 20px' src='./src/images/responsive2.png' alt='layout responsivo para celular'> <img style='width:200px' src='./src/images/responsive3.png' alt='layout responsivo para celular'> <img style='width:200px' src='./src/images/responsive4.png' alt='layout responsivo para celular'> <img style='width:200px' src='./src/images/responsive4.png' alt='layout responsivo para celular'> <img style='width:200px' src='./src/images/responsive4.png' alt='layout responsivo para celular'> <img style='width:200px' src='./src/images/responsive4.png' alt='layout responsivo para celular'>
 
   </div>
 
