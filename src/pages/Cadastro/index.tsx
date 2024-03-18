@@ -93,6 +93,7 @@ export const Cadastro = () => {
           url: downloadUrl,
         }
         setImagesItem((images) => [...images, imageItem])
+        navigate('/')
       })
     })
   }
@@ -104,6 +105,7 @@ export const Cadastro = () => {
     try {
       await deleteObject(imageRef)
       setImagesItem(imagesItem.filter((img) => img.url !== item.url))
+      navigate('/')
     } catch (error) {
       // console.log('ERRO AO DELETAR')
     }
