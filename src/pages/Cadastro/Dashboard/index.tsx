@@ -82,6 +82,7 @@ export const Dashboard = () => {
         })
       })
       setItems(listItems)
+      navigate('/')
       // console.log('ITEMS:', listItems)
       //})
     })
