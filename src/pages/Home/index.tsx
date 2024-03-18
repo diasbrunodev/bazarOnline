@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { collection, getDocs, orderBy, query } from 'firebase/firestore'
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
 import { db } from '../../services/firebaseConnection'
 import { CardSection, HomeSection, Informations } from './styles'
 
@@ -25,16 +25,24 @@ export const Home = () => {
   const [loadImages, setLoadImages] = useState<string[]>([])
 
   useEffect(() => {
-    loadItems()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [items])
+    const unsubscribe = loadItems()
+
+    return () => {
+      unsubscribe
+      console.log('SAIU!')
+    }
+  }, [])
 
   function loadItems() {
     const itemsRef = collection(db, 'items')
     const queryRef = query(itemsRef, orderBy('created', 'desc'))
 
-    getDocs(queryRef).then((snapshot) => {
-      //console.log('SNAPSHOT_DOCS:', snapshot.docs)
+    //old code
+    //getDocs(queryRef).then((snapshot) => {
+    //console.log('SNAPSHOT_DOCS:', snapshot.docs)
+
+    //new code
+    const unsub = onSnapshot(queryRef, (snapshot) => {
       const listItems = [] as ItemsProps[]
 
       snapshot.forEach((item) => {
@@ -51,6 +59,13 @@ export const Home = () => {
       setItems(listItems)
       // console.log('ITEMS:', items)
     })
+
+    return () => {
+      unsub()
+      console.log('SAIU!')
+    }
+
+    //})
   }
 
   function handleImageLoad(id: string) {
