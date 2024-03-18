@@ -29,7 +29,7 @@ export const Home = () => {
 
     return () => {
       unsubscribe
-      console.log('SAIU!')
+      //console.log('SAIU!')
     }
   }, [])
 
@@ -62,7 +62,7 @@ export const Home = () => {
 
     return () => {
       unsub()
-      console.log('SAIU!')
+      //console.log('SAIU!')
     }
 
     //})

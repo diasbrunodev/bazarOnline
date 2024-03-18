@@ -9,6 +9,7 @@ import {
   deleteDoc,
   doc,
   getDocs,
+  onSnapshot,
   orderBy,
   query,
   where,
@@ -42,7 +43,12 @@ export const Dashboard = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    loadItems()
+    const unsubscribe = loadItems()
+
+    return () => {
+      unsubscribe
+      //console.log('SAIU!')
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -59,7 +65,11 @@ export const Dashboard = () => {
     //pega todos cadastrados em ordem
     const queryRef = query(itemsRef, orderBy('created', 'desc'))
 
-    getDocs(queryRef).then((snapshot) => {
+    //old code
+    //getDocs(queryRef).then((snapshot) => {
+
+    //new code
+    const unsub = onSnapshot(queryRef, (snapshot) => {
       const listItems = [] as ItemProps[]
 
       snapshot.forEach((doc) => {
@@ -73,7 +83,12 @@ export const Dashboard = () => {
       })
       setItems(listItems)
       // console.log('ITEMS:', listItems)
+      //})
     })
+    return () => {
+      unsub()
+      //console.log('SAIU!')
+    }
   }
 
   async function handleDeleteItem(item: ItemProps) {
