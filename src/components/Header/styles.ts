@@ -20,6 +20,10 @@ export const HeaderBar = styled.header`
   align-items: center;
   justify-content: space-between;
 
+  .titulo {
+    color: ${colors.green};
+  }
+
   @media (min-width: ${breakpoints.tablet}) {
     align-items: end;
   }

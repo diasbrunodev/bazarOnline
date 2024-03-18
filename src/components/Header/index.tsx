@@ -13,7 +13,9 @@ export const Header = () => {
           </Link>
         </DivImage>
 
-        <div className="titulo">Bazar Tropinha</div>
+        <Link to="/">
+          <div className="titulo">Bazar Tropinha</div>
+        </Link>
 
         {/* <div><button>Carrinho</button></div> */}
       </HeaderBar>

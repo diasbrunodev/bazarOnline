@@ -31,24 +31,25 @@ const router = createBrowserRouter([
           </Private>
         ),
       },
+      {
+        path: '/cadastro',
+        element: (
+          <Private>
+            <Cadastro />
+          </Private>
+        ),
+      },
+      {
+        path: '/dashboard',
+        element: (
+          <Private>
+            <Dashboard />
+          </Private>
+        ),
+      },
     ],
   },
-  {
-    path: '/cadastro',
-    element: (
-      <Private>
-        <Cadastro />
-      </Private>
-    ),
-  },
-  {
-    path: '/dashboard',
-    element: (
-      <Private>
-        <Dashboard />
-      </Private>
-    ),
-  },
+
   {
     path: '/login',
     element: <Login />,
