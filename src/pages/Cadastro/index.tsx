@@ -93,7 +93,6 @@ export const Cadastro = () => {
           url: downloadUrl,
         }
         setImagesItem((images) => [...images, imageItem])
-        navigate('/')
       })
     })
   }
@@ -105,7 +104,6 @@ export const Cadastro = () => {
     try {
       await deleteObject(imageRef)
       setImagesItem(imagesItem.filter((img) => img.url !== item.url))
-      navigate('/')
     } catch (error) {
       // console.log('ERRO AO DELETAR')
     }
@@ -135,10 +133,10 @@ export const Cadastro = () => {
       uid: user?.uid,
     })
       .then(() => {
-        // console.log('CADASTRADO COM SUCESSO', db)
+        //console.log('CADASTRADO COM SUCESSO', db)
         setImagesItem([])
         reset()
-        navigate('/')
+        navigate('/dashboard')
       })
       .catch((error) => {
         // console.log('ERRO:', error)
