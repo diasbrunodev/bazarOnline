@@ -41,7 +41,7 @@ export const ItemDetail = () => {
 
   const numeroWhatsApp = '5521983248503'
   const mensagem = `${item?.id}`
-  const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`
+  const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensagem}`
 
   useEffect(() => {
     loadItem()
