@@ -40,7 +40,7 @@ export const ItemDetail = () => {
   const [sliderPerView, setSliderPerView] = useState(2)
 
   const numeroWhatsApp = '5521983248503'
-  const mensagem = `Olá, gostaria de comprar esse produto: ${item?.name} Código: ${item?.id}`
+  const mensagem = `${item?.id}`
   const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`
 
   useEffect(() => {
