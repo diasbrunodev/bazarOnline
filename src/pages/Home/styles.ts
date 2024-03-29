@@ -28,7 +28,7 @@ export const CardSection = styled.section`
 
   img {
     width: 100%;
-    height: 12em;
+    height: 20em;
     object-fit: cover;
   }
 `
